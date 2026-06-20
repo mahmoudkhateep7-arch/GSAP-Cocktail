@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'modern_nigra', sans-serif;
+  src: url('/fonts/Modern\ Negra\ Demo.ttf');
+  font-display: swap;
+}
+
+@theme {
+  --color-purpleee: #7969c9;
+  --color-graywhite: #a1a1a1;
+  --color-bgbakground: #5c5b7bbe;
+  --font-DM_Serif_Text_Font: var(--DM_Serif_Text_Font);
+  --font-Mona_Sans_Font: var(--Mona_Sans_Font);
+  --font-Modern_Negra_Font: 'Modern Negra'
+
+}
+
+
+
+html,
+body {
+  scroll-behavior: smooth;
+
+
+}
