@@ -56,7 +56,7 @@ export default function VideoHero() {
     <div id={`con`} className={`absolute  max-sm:hidden  w-full flex flex-col justify-end h-full`}>
       {/* video */}
 
-      <video playsInline={true} ref={videoRef} className={`block      h-140`} muted={true} src={'/videos/output.mp4'}></video>
+      <video preload="auto" playsInline={true} ref={videoRef} className={`block      h-140`} muted={true} src={'/videos/output.mp4'}></video>
 
     </div>
   )
