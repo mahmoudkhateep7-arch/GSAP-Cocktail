@@ -3,9 +3,9 @@ import Coctail_Right_Leaf_C from "./coctail_right_leaf";
 import Coctail_Right_Text_C from "./coctail_rigth_text";
 import Coctail_Text_Left_C from "./coctail_text_left";
 
-export default function Coctail_C() {
+export default function Coctail_C({ navHieght }: { navHieght: number }) {
   return (
-    <section id={'cocktails'} className={`px-4   overflow-hidden relative max-sm:px-1`}>
+    <section style={{ scrollMarginTop: navHieght }} id={'cocktails'} className={`px-4   overflow-hidden relative max-sm:px-1`}>
       {/*  */}
       <div id={`parnt_left_right`} className={`max-w-7xl  relative z-10 max-sm:h-auto  max-sm: flex flex-col justify-center mx-auto h-screen`}>
 
