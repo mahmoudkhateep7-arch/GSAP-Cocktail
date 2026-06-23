@@ -76,3 +76,34 @@ body {
 
 
 }
+
+#menu_leaf {
+  background-image: url('../public/images/slider-left-leaf.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+}
+
+#menu_leaf_right {
+  background-image: url('../public/images/slider-right-leaf.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+
+
+
+
+}
+
+#contect_right_leaf {
+  background-image: url('../public/images/footer-right-leaf.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+
+}
+
+#contect_left_leaf {
+  background-image: url('../public/images/footer-left-leaf.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+}
