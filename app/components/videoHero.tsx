@@ -8,13 +8,15 @@ export default function VideoHero() {
   const videoRef = useRef<null | HTMLVideoElement>(null)
 
   useGSAP(() => {
+
     if (videoRef.current == null) { return }
+    let tl: gsap.core.Timeline | null = null
     const video = videoRef.current
     const duntionToBeCalledWhenVideoLoad = () => {
       video.pause()
       video.currentTime = 0
 
-      gsap.timeline({
+      tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#con',
           start: 'top top',
@@ -25,7 +27,8 @@ export default function VideoHero() {
       })
         .to(videoRef.current, {
           currentTime: video.duration,
-          duration: 5
+          duration: 5,
+          ease: 'none'
 
         })
         .to(video, { x: '100vw', duration: 2 })
@@ -36,6 +39,15 @@ export default function VideoHero() {
 
     } else {
       video.addEventListener('loadedmetadata', duntionToBeCalledWhenVideoLoad)
+    }
+    return () => {
+      video.removeEventListener('loadedmetadata', duntionToBeCalledWhenVideoLoad)
+      if (tl) {
+        tl.kill()
+        if (tl.scrollTrigger) {
+          tl.scrollTrigger.kill()
+        }
+      }
     }
 
 
