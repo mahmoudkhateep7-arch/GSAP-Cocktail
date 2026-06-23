@@ -14,7 +14,10 @@ const DM_Serif_Text_Font = DM_Serif_Text({
   variable: '--DM_Serif_Text_Font'
 })
 export const metadata: Metadata = {
-  title: 'coffee'
+  title: 'coffee',
+  icons: {
+    icon: '/images/fb.png'
+  }
 }
 
 export default function ({ children }: React.PropsWithChildren) {
@@ -40,7 +43,8 @@ export default function ({ children }: React.PropsWithChildren) {
         
         bg-black
         text-white w-full overflow-x-hidden
-        
+        relative
+
         
         `}>
         {children}

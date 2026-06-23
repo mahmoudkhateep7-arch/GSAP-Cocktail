@@ -7,20 +7,72 @@
 }
 
 @theme {
-  --color-purpleee: #7969c9;
-  --color-graywhite: #a1a1a1;
-  --color-bgbakground: #5c5b7bbe;
   --font-DM_Serif_Text_Font: var(--DM_Serif_Text_Font);
   --font-Mona_Sans_Font: var(--Mona_Sans_Font);
-  --font-Modern_Negra_Font: 'Modern Negra'
-
+  --font-Modern_Negra_Font: 'Modern Negra';
 }
-
-
 
 html,
 body {
   scroll-behavior: smooth;
+}
+
+#right_leaf_bg {
+  background-image: url('../public/images/hero-right-leaf.png');
+  background-repeat: no-repeat;
+
+  background-position: right top;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+#left_leaf_bg {
+  background-image: url('../public/images/hero-left-leaf.png');
+  background-repeat: no-repeat;
+
+  background-position: left;
+}
+
+#noise_bg {
+  background-image: url('../public/images/noise.png');
+
+}
+
+#coctail_right_image_id {
+  background-image: url('../public/images/cocktail-right-leaf.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+}
+
+#coctail_left_image_id {
+  background-image: url('../public/images/cocktail-left-leaf.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+}
+
+#mask_img {
+  mask-image: url('../public/images/mask-img.png');
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+
+
+
+
+  mask-size: 60%;
+
+
+
+
+
+
+
+
+
 
 
 }
