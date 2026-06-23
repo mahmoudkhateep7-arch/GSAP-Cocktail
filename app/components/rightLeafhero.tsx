@@ -14,7 +14,6 @@ export default function RightHeroLeaf() {
       },
       duration: 2,
       y: 2000,
-      bac: 'red'
     })
   }, [])
   return (

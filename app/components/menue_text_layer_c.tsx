@@ -16,9 +16,7 @@ export default function Menu_text_Layer_c() {
       , { color: '#fff', duration: .1, borderBottomColor: '#fff' })
   }, [])
   const handleClick = (id: number) => {
-    console.log(id, activeIndex)
     if (activeIndex != id) {
-      console.log(2222222)
 
       gsap.fromTo(`.box${id}`, { borderBottomColor: '#a5a0a0', color: '#a5a0a0' }
         , { color: '#fff', duration: .9, borderBottomColor: '#fff' })
@@ -74,7 +72,6 @@ export default function Menu_text_Layer_c() {
     }
     gsap.fromTo('.upandopacity', { opacity: 0, y: 100 }, { y: 0, opacity: 1, duration: 1, delay: .3 })
   }, [activeIndex])
-  console.log(activeIndex)
   return (
     <div className={`relative z-40`}>
       {/* top */}

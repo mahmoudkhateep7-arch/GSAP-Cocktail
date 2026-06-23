@@ -8,23 +8,34 @@ export default function VideoHero() {
   const videoRef = useRef<null | HTMLVideoElement>(null)
 
   useGSAP(() => {
-    if (videoRef.current) {
-      const video = videoRef.current
+    if (videoRef.current == null) { return }
+    const video = videoRef.current
+    const duntionToBeCalledWhenVideoLoad = () => {
       video.pause()
       video.currentTime = 0
-      gsap.to(video, {
-        currentTime: video.duration,
 
-
+      gsap.timeline({
         scrollTrigger: {
           trigger: '#con',
-          start: 'top-=10% top',
-          // pin: true,
-          scrub: true
-        },
-
+          start: 'top top',
+          end: '+=100%',
+          scrub: true,
+          pin: true
+        }
       })
+        .to(videoRef.current, {
+          currentTime: video.duration,
+          duration: 5
 
+        })
+        .to(video, { x: '100vw', duration: 2 })
+
+    }
+    if (video.readyState >= 1) {
+      duntionToBeCalledWhenVideoLoad()
+
+    } else {
+      video.addEventListener('loadedmetadata', duntionToBeCalledWhenVideoLoad)
     }
 
 
